@@ -1,0 +1,46 @@
+@use "../styles" as *;
+
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    text-align: center;
+    color: white;
+    flex-direction: column;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        background: $background-color;
+        color: #007bff;
+        padding: 10px 20px;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background: #f4f4f4;
+        }
+    }
+
+    @include respond(tablet) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @include respond(mobile) {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
